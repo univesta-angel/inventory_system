@@ -9,4 +9,5 @@ class EComPlatform extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
     protected $table = 'ecom_platforms';
+    
 }
