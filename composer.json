@@ -17,6 +17,7 @@
         "laravel/jetstream": "^1.4",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.2",
         "owen-it/laravel-auditing": "^11.0",
         "tightenco/ziggy": "^0.9.4"
     },
