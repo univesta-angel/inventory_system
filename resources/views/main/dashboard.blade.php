@@ -29,7 +29,7 @@
       <div class="icon">
         <i class="fas fa-boxes"></i>
       </div>
-      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+      <div class="small-box-footer"><span class="text-white">All</span></div>
     </div>
   </div>
   <div class="col-lg-3 col-6">
@@ -40,7 +40,7 @@
         <p>Shopee</p>
       </div>
       <div class="icon">
-        <i class="ion ion-stats-bars"></i>
+        <i class="fas fa-box"></i>
       </div>
       <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
@@ -68,7 +68,7 @@
       <div class="icon">
         <i class="fab fa-shopify"></i>
       </div>
-      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+      <a href="/products/shopify" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
   </div>
 </div>

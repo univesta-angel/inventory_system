@@ -34,22 +34,22 @@
               <i class="fas fa-angle-left right"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
+          <ul class="nav nav-treeview ml-4">
             <li class="nav-item">
               <a href="/products/shopee" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="fas fa-store-alt nav-icon"></i>
                 <p>Shopee</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="/products/lazada" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="fas fa-shopping-bag nav-icon"></i>
                 <p>Lazada</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="/products/shopify" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="fab fa-shopify nav-icon"></i>
                 <p>Shopify</p>
               </a>
             </li>
