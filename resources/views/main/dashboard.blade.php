@@ -40,9 +40,9 @@
         <p>Shopee</p>
       </div>
       <div class="icon">
-        <i class="fas fa-box"></i>
+        <i class="fas fa-store-alt"></i>
       </div>
-      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+      <a href="/products/shopee" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
   </div>
   <div class="col-lg-3 col-6">
@@ -53,9 +53,9 @@
         <p>Lazada</p>
       </div>
       <div class="icon">
-        <i class="ion ion-person-add"></i>
+        <i class="fas fa-shopping-bag"></i>
       </div>
-      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+      <a href="/products/lazada" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
     </div>
   </div>
   <div class="col-lg-3 col-6">
