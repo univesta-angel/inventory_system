@@ -27,7 +27,7 @@
     <div class="card">
       <div class="card-body">
 
-        <form role="form" action="/settings/{{ $platform->id }}/update">
+        {{ Form::open(array('url' => '/settings/'.$platform->id.'/update', 'method' => 'PUT')) }}
           @csrf
           <input type="hidden" name="_method" value="PUT">
           <div class="card-body">
@@ -37,11 +37,11 @@
             </div>
             <div class="form-group">
               <label for="api_key">API Key</label>
-              <input type="text" class="form-control" id="api_key" name="api_key" placeholder="API Key" value="{{ Crypt::decryptString($platform->api_key) }}">
+              <input type="text" class="form-control" id="api_key" name="api_key" placeholder="API Key" value="@if($platform->api_key != '') {{ Crypt::decryptString($platform->api_key) }} @endif">
             </div>
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="text" class="form-control" id="password" name="password" placeholder="Password" value="{{ Crypt::decryptString($platform->password) }}">
+              <input type="text" class="form-control" id="password" name="password" placeholder="Password" value="@if($platform->password != '') {{ Crypt::decryptString($platform->password) }} @endif">
             </div>
             @if($platform->id == 3)
             <div class="form-group">
@@ -59,7 +59,7 @@
           <div class="card-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
-        </form>
+        {{ Form::close() }}
 
       </div>
     </div>

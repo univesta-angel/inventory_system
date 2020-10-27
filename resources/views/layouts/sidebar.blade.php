@@ -34,22 +34,22 @@
               <i class="fas fa-angle-left right"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
+          <ul class="nav nav-treeview ml-4">
             <li class="nav-item">
               <a href="/products/shopee" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="fas fa-store-alt nav-icon"></i>
                 <p>Shopee</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="/products/lazada" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="fas fa-shopping-bag nav-icon"></i>
                 <p>Lazada</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="/products/shopify" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
+                <i class="fab fa-shopify nav-icon"></i>
                 <p>Shopify</p>
               </a>
             </li>
@@ -62,6 +62,23 @@
               Settings
             </p>
           </a>
+        </li>
+        <li class="nav-item">
+          <a href="/audits" class="nav-link">
+            <i class="nav-icon fas fa-list-alt"></i>
+            <p>
+              Audit Trail
+            </p>
+          </a>
+        </li>
+        <li class="nav-item fixed-bottom">
+          <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();" class="nav-link">
+            <i class="nav-icon fas fa-sign-out-alt"></i>
+            <p>Logout</p>
+          </a>
+          <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+          </form>
         </li>
       </ul>
     </nav>
