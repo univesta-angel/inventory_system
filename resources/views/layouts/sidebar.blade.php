@@ -63,6 +63,14 @@
             </p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="/audits" class="nav-link">
+            <i class="nav-icon fas fa-list-alt"></i>
+            <p>
+              Audit Trail
+            </p>
+          </a>
+        </li>
         <li class="nav-item fixed-bottom">
           <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();" class="nav-link">
             <i class="nav-icon fas fa-sign-out-alt"></i>

@@ -37,4 +37,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/settings', 'App\Http\Cont
 Route::middleware(['auth:sanctum', 'verified'])->get('/settings/{id}', 'App\Http\Controllers\SettingsController@edit')->name('setting');
 Route::put('/settings/{id}/update', 'App\Http\Controllers\SettingsController@update');
 
+// Audit Trail
+Route::middleware(['auth:sanctum', 'verified'])->get('/audits', 'App\Http\Controllers\AuditTrail@show')->name('audits');
 
