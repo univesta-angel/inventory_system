@@ -22,7 +22,7 @@ class AuditTrail extends Controller
     public function show()
     {
         $user = Auth::user();
-        $audits = Audit::where('auditable_type', 'App\Models\ShopifyProduct')->orderBy('created_at', 'DESC')->simplePaginate(10);
+        $audits = Audit::where('auditable_type', 'App\Models\ShopifyProduct')->where('event', 'updated')->orderBy('created_at', 'DESC')->simplePaginate(10);
         return view('main.audit_trail',
             ['user'=>$user,
             'audits'=>$audits]
