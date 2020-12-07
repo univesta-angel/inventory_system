@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Audit;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 
 class LazadaCallback extends Controller
@@ -22,7 +23,10 @@ class LazadaCallback extends Controller
         $user = Auth::user();
     }
 
-    public function callback(){
-       // echo 'abc';
+    public function callback(Request $request){
+        // echo 'abc';
+        // get code from auth
+        
+
     }
 }

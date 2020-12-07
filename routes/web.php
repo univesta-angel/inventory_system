@@ -43,4 +43,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/audits', 'App\Http\Contro
 
 
 // LAZADA OPEN PLATFORM CALLBACK URL
-Route::middleware(['auth:sanctum', 'verified'])->get('/lazada/auth/callback', 'App\Http\Controllers\LazadaCallback@callback');
+Route::get('/lazada/auth/callback', 'App\Http\Controllers\LazadaCallback@callback');
