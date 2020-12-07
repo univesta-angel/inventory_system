@@ -20,7 +20,6 @@ class LazadaCallback extends Controller
     public function show()
     {
         $user = Auth::user();
-        );
     }
 
     public function callback(){
