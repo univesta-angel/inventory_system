@@ -23,6 +23,6 @@ class LazadaCallback extends Controller
     }
 
     public function callback(){
-        echo 'abc';
+       // echo 'abc';
     }
 }
