@@ -17,6 +17,10 @@ use Illuminate\Contracts\Encryption\DecryptException;
 
 use GuzzleHttp\Client;
 
+use Paulwscom\Lazada\LazopClient;
+use Paulwscom\Lazada\LazopRequest;
+use Paulwscom\Lazada\LazopLogger;
+
 class LazadaCallback extends Controller
 {
     /**
@@ -51,21 +55,14 @@ class LazadaCallback extends Controller
             echo 'Missing Password.<br>';
         }
 
-        /*$c = new LazopClient($url,$appkey,$appSecret);
+        $c = new LazopClient($url,$appkey,$appSecret);
         $request = new LazopRequest('/auth/token/create');
         $request->addApiParam('code','0_124157_dxtu3JzMDqZMFTpbEeKD7p0T34358');
 
         $result = $c->execute($request);
-        $result_json = json_decode($result);*/
+        $json = json_decode($result,true);
 
-        $data = array(
-            "code" => $code,
-            "app_key" => $appkey,
-            "app_secret" => $appSecret
-        );
-        $response = $this->request2('GET','/auth/token/create', $data);
-
-        var_dump($response);
+        var_dump($json);
 
         /*DB::table('lazada_auth')->insert([
             'access_token' => $json['access_token'],
@@ -82,7 +79,7 @@ class LazadaCallback extends Controller
         die();
     }
 
-    public function request2($method,$endpoint,$param=[])
+    public function request2($method,$endpoint,$app_key,$app_secret,$param=[])
     {
         $client = new \GuzzleHttp\Client();
         $base_url = "https://api.lazada.com.ph/rest";
@@ -90,6 +87,7 @@ class LazadaCallback extends Controller
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json'
+                'app_key' => $app_key
             ]
         ];
         if(!empty($param)){ $parameters['json'] = $param;}
