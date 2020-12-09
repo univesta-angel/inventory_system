@@ -60,27 +60,12 @@ class LazadaCallback extends Controller
 
         $data = array(
             "code" => $code,
+            "app_key" => $appkey,
+            "app_secret" => $appSecret
         );
+        $response = $this->request2('GET','/auth/token/create', $data);
 
-        $client = new \GuzzleHttp\Client();
-        $base_url = "https://api.lazada.com.ph/rest";
-        $endpoint = '/auth/token/create';
-        $parameters = [
-            'headers' => [
-                'Content-Type' => 'application/json',
-                'Accept' => 'application/json'
-            ]
-        ];
-
-        $method = 'GET';
-
-        if(!empty($data)){ $parameters['json'] = $data;}
-        $response = $client->request($method, $base_url.$endpoint,$parameters);
-        $body = $response->getBody();
-        $stringBody = (string) $body;
-        $json = json_decode($body,true);
-
-        var_dump($json);
+        var_dump($response);
 
         /*DB::table('lazada_auth')->insert([
             'access_token' => $json['access_token'],
@@ -95,5 +80,23 @@ class LazadaCallback extends Controller
 
         echo 'Authorization success and access token saved!';*/
         die();
+    }
+
+    public function request2($method,$endpoint,$param=[])
+    {
+        $client = new \GuzzleHttp\Client();
+        $base_url = "https://api.lazada.com.ph/rest";
+        $parameters = [
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'Accept' => 'application/json'
+            ]
+        ];
+        if(!empty($param)){ $parameters['json'] = $param;}
+        $base_url = "https://api.lazada.com.ph/rest";
+        $body = $response->getBody();
+        $stringBody = (string) $body;
+        $json = json_decode($body,true);
+        return $json;
     }
 }
