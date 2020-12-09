@@ -72,22 +72,22 @@ class LazadaCallback extends Controller
         ];
 
         $method = 'GET';
-        
+
         if(!empty($data)){ $parameters['json'] = $data;}
         $response = $client->request($method, $base_url,$parameters);
         $body = $response->getBody();
         $stringBody = (string) $body;
-        $json = json_decode($body);
+        $json = json_decode($body,true);
 
         DB::table('lazada_auth')->insert([
-            'access_token' => $json->access_token,
-            'refresh_token' => $json->refresh_token,
-            'country' => $json->country,
-            'refresh_expires_in' => $json->refresh_expires_in,
-            'account_platform' => $json->account_platform,
-            'expires_in' => $json->expires_in,
-            'account' => $json->account,
-            'country_user_info' => json_encode($json->country)
+            'access_token' => $json['access_token'],
+            'refresh_token' => $json['refresh_token'],
+            'country' => $json['country'],
+            'refresh_expires_in' => $json['refresh_expires_in'],
+            'account_platform' => $json['account_platform'],
+            'expires_in' => $json['expires_in'],
+            'account' => $json['account'],
+            'country_user_info' => json_encode($json['country'])
         ]);
 
         echo 'Authorization success and access token saved!';
