@@ -79,7 +79,7 @@ class LazadaCallback extends Controller
         die();
     }
 
-    public function request2($method,$endpoint,$app_key,$app_secret,$param=[])
+    /*public function request2($method,$endpoint,$app_key,$app_secret,$param=[])
     {
         $client = new \GuzzleHttp\Client();
         $base_url = "https://api.lazada.com.ph/rest";
@@ -97,5 +97,5 @@ class LazadaCallback extends Controller
         $stringBody = (string) $body;
         $json = json_decode($body,true);
         return $json;
-    }
+    }*/
 }
