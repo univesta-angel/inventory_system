@@ -64,6 +64,7 @@ class LazadaCallback extends Controller
 
         $client = new \GuzzleHttp\Client();
         $base_url = "https://api.lazada.com.ph/rest";
+        $endpoint = '/auth/token/create';
         $parameters = [
             'headers' => [
                 'Content-Type' => 'application/json',
@@ -74,14 +75,12 @@ class LazadaCallback extends Controller
         $method = 'GET';
 
         if(!empty($data)){ $parameters['json'] = $data;}
-        $response = $client->request($method, $base_url,$parameters);
+        $response = $client->request($method, $base_url.$endpoint,$parameters);
         $body = $response->getBody();
         $stringBody = (string) $body;
         $json = json_decode($body,true);
 
-        var_dump($json);
-
-        /*DB::table('lazada_auth')->insert([
+        DB::table('lazada_auth')->insert([
             'access_token' => $json['access_token'],
             'refresh_token' => $json['refresh_token'],
             'country' => $json['country'],
@@ -92,7 +91,7 @@ class LazadaCallback extends Controller
             'country_user_info' => json_encode($json['country'])
         ]);
 
-        echo 'Authorization success and access token saved!';*/
+        echo 'Authorization success and access token saved!';
         die();
     }
 }
