@@ -19,7 +19,6 @@ use GuzzleHttp\Client;
 
 use Paulwscom\Lazada\LazopClient;
 use Paulwscom\Lazada\LazopRequest;
-use Paulwscom\Lazada\LazopLogger;
 
 class LazadaCallback extends Controller
 {
