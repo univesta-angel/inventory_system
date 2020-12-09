@@ -19,8 +19,7 @@
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.2",
         "owen-it/laravel-auditing": "^11.0",
-        "tightenco/ziggy": "^0.9.4",
-        "paulwscom/lazada-php-sdk": "1.0"
+        "tightenco/ziggy": "^0.9.4"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
@@ -43,8 +42,7 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "Paulwscom\\Lazada\\": "paulwscom/lazada-php-sdk/src/"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
