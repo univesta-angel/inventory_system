@@ -178,8 +178,6 @@ return [
         App\Providers\JetstreamServiceProvider::class,
 
         OwenIt\Auditing\AuditingServiceProvider::class,
-
-        Paulwscom\Laravel\LazopServiceProvider::class,
     ],
 
     /*
