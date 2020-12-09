@@ -94,6 +94,7 @@ class LazadaCallback extends Controller
         ];
         if(!empty($param)){ $parameters['json'] = $param;}
         $base_url = "https://api.lazada.com.ph/rest";
+        $response = $client->request($method, $base_url.$endpoint,$parameters);
         $body = $response->getBody();
         $stringBody = (string) $body;
         $json = json_decode($body,true);
