@@ -21,12 +21,12 @@ class LazadaCallback extends Controller
     public function show()
     {
         $user = Auth::user();
+        echo 'Authorization success!';
+        die();
     }
 
     public function callback(Request $request){
-        // echo 'abc';
-        // get code from auth
-        
-
+        var_dump($request->all());
+        die();
     }
 }
