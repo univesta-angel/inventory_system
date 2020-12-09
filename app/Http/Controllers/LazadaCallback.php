@@ -55,8 +55,8 @@ class LazadaCallback extends Controller
             echo 'Missing Password.<br>';
         }
 
-        $c = new LazopClient($url,$appkey,$appSecret);
-        $request = new LazopRequest('/auth/token/create');
+        $c = new \Paulwscom\Lazada\LazopClient($url,$appkey,$appSecret);
+        $request = new \Paulwscom\Lazada\LazopRequest('/auth/token/create');
         $request->addApiParam('code','0_124157_dxtu3JzMDqZMFTpbEeKD7p0T34358');
 
         $result = $c->execute($request);
