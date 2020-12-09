@@ -80,7 +80,9 @@ class LazadaCallback extends Controller
         $stringBody = (string) $body;
         $json = json_decode($body,true);
 
-        DB::table('lazada_auth')->insert([
+        var_dump($json);
+
+        /*DB::table('lazada_auth')->insert([
             'access_token' => $json['access_token'],
             'refresh_token' => $json['refresh_token'],
             'country' => $json['country'],
@@ -91,7 +93,7 @@ class LazadaCallback extends Controller
             'country_user_info' => json_encode($json['country'])
         ]);
 
-        echo 'Authorization success and access token saved!';
+        echo 'Authorization success and access token saved!';*/
         die();
     }
 }
