@@ -70,6 +70,9 @@ class LazadaCallback extends Controller
                 'Accept' => 'application/json'
             ]
         ];
+
+        $method = 'GET';
+        
         if(!empty($data)){ $parameters['json'] = $data;}
         $response = $client->request($method, $base_url,$parameters);
         $body = $response->getBody();
