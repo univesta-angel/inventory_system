@@ -44,7 +44,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Paulwscom\\Lazada": "paulwscom/lazada-php-sdk/src"
+            "Paulwscom\\Lazada\\": "paulwscom/lazada-php-sdk/src"
         }
     },
     "autoload-dev": {
