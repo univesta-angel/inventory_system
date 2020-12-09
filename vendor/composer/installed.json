@@ -3122,6 +3122,51 @@
         "description": "Library for handling version information and constraints"
     },
     {
+        "name": "paulwscom/lazada-php-sdk",
+        "version": "1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paulwscom/lazada-php-sdk.git",
+            "reference": "a376d48dc208434b8ab8cadc28603a22db3d29b3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/paulwscom/lazada-php-sdk/zipball/a376d48dc208434b8ab8cadc28603a22db3d29b3",
+            "reference": "a376d48dc208434b8ab8cadc28603a22db3d29b3",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.2"
+        },
+        "time": "2019-11-06T09:28:53+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Paulwscom\\Lazada\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Paul Mikki Escorido",
+                "email": "paulwscom@gmail.com",
+                "homepage": "https://www.paulws.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "A Lazada PHP SDK for Laravel",
+        "homepage": "https://github.com/paulwscom/lazada-php-sdk",
+        "keywords": [
+            "Lazada",
+            "laravel"
+        ]
+    },
+    {
         "name": "phpdocumentor/reflection-common",
         "version": "2.2.0",
         "version_normalized": "2.2.0.0",
