@@ -19,7 +19,6 @@
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.2",
         "owen-it/laravel-auditing": "^11.0",
-        "paulwscom/lazada-php-sdk": "1.0",
         "tightenco/ziggy": "^0.9.4"
     },
     "require-dev": {
