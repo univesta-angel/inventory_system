@@ -40,3 +40,7 @@ Route::put('/settings/{id}/update', 'App\Http\Controllers\SettingsController@upd
 // Audit Trail
 Route::middleware(['auth:sanctum', 'verified'])->get('/audits', 'App\Http\Controllers\AuditTrail@show')->name('audits');
 
+
+
+// LAZADA OPEN PLATFORM CALLBACK URL
+Route::get('/lazada/auth/callback', 'App\Http\Controllers\LazadaCallback@callback');

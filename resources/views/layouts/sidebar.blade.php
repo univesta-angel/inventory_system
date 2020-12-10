@@ -71,7 +71,7 @@
             </p>
           </a>
         </li>
-        <li class="nav-item fixed-bottom">
+        <li class="nav-item" style="position: fixed; bottom: 0; width: 235px;">
           <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();" class="nav-link">
             <i class="nav-icon fas fa-sign-out-alt"></i>
             <p>Logout</p>
