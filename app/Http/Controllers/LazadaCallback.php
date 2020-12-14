@@ -42,6 +42,8 @@ class LazadaCallback extends Controller
         ]);
 
         $platform = EcomPlatform::find(2);
+        $appkey = '';
+        $appSecret = '';
         if ($platform->api_key != '') {
             $appkey = Crypt::decryptString($platform->api_key);
         }
@@ -53,6 +55,8 @@ class LazadaCallback extends Controller
         } else {
             echo 'Missing Password.<br>';
         }
+
+        $url = 'https://api.lazada.com.ph/rest';
 
         $c = new LazopClient($url,$appkey,$appSecret);
         $request = new LazopRequest('/auth/token/create');
