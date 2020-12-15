@@ -60,14 +60,14 @@ class LazadaCallback extends Controller
 
         $c = new LazopClient($url,$appkey,$appSecret);
         $request = new LazopRequest('/auth/token/create');
-        $request->addApiParam('code','0_124157_dxtu3JzMDqZMFTpbEeKD7p0T34358');
+        $request->addApiParam('code', $code);
 
         $result = $c->execute($request);
         $json = json_decode($result,true);
 
         var_dump($json);
 
-        /*DB::table('lazada_auth')->insert([
+        DB::table('lazada_auth')->insert([
             'access_token' => $json['access_token'],
             'refresh_token' => $json['refresh_token'],
             'country' => $json['country'],
@@ -75,10 +75,11 @@ class LazadaCallback extends Controller
             'account_platform' => $json['account_platform'],
             'expires_in' => $json['expires_in'],
             'account' => $json['account'],
-            'country_user_info' => json_encode($json['country'])
+            'country_user_info' => json_encode($json['country_user_info'])
         ]);
 
-        echo 'Authorization success and access token saved!';*/
+        echo '<br><hr>';
+        echo 'Authorization success and access token saved!';
         die();
     }
 
